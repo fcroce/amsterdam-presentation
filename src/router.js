@@ -1,7 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import About from "./views/About.vue";
+import VueCli from "./views/VueCli.vue";
+import Panel from "./views/Panel.vue";
 
 Vue.use(Router);
 
@@ -13,9 +14,15 @@ export default new Router({
       component: Home
     },
     {
-      path: "/about",
-      name: "about",
-      component: About
-    }
+        path: "/vue-cli",
+        name: "vue-cli",
+        component: VueCli
+    },
+    {
+        path: "/panel",
+        name: "panel",
+        component: Panel
+    },
+
   ]
 });
