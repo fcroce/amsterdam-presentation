@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <div id="background"></div>
-      <transition name="fade" mode="out-in"
-        enter-active-class="animated bounceInLeft"
-        @before-leave="beforeLeave"
-      >
-          <router-view/>
-      </transition>
+    <transition name="fade" mode="out-in"
+      enter-active-class="animated bounceInLeft"
+      @before-leave="beforeLeave"
+    >
+        <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -37,8 +37,8 @@ html{
 body{
     height:100%
 }
-a {
-    color: #212121;
+h1, h2, h3, p, a {
+  color: #212121;
 }
 
 #app {

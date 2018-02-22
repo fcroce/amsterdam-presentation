@@ -9,13 +9,13 @@
                     <router-link to="/vue-cli">vue-cli 3.0.0-beta.1</router-link>
                 </li>
                 <li>
-                    <router-link to="/transitions">Transitions</router-link>
+                    <router-link to="/transitions">CSS Transitions</router-link>
                 </li>
                 <li>
-                    <router-link to="/state-transitions">State Transitions</router-link>
+                    <router-link to="/state-transitions">Vue Transitions</router-link>
                 </li>
                 <li>
-                    <router-link to="/tweezing">Tweezing / Tween.js</router-link>
+                    <router-link to="/tweezing">Nuxt</router-link>
                 </li>
                 <li>
                     <router-link to="/vue-cli">Vuex</router-link>
@@ -24,6 +24,13 @@
                     <router-link to="/panel">Vuetify Panel</router-link>
                 </li>
             </ul>
+
+            <div class="github-url">
+                <img src="@/assets/github-url.jpg">
+                <p>
+                    <a href="https://github.com/fcroce/AmsterdamPresentation" target="_blank">You can download the source on GihHub</a>
+                </p>
+            </div>
         </div>
     </div>
 </template>
@@ -53,6 +60,7 @@ export default {
 
     h3 {
         font-size: 1.5em;
+        font-weight: 900;
         margin: 40px 0;
     }
 
@@ -65,7 +73,14 @@ export default {
         display: inline-block;
         margin: 0 10px;
     }
-    li a {
-        color: #212121;
+
+    .github-url {
+        text-align: center;
+        padding: 100px 0 0;
+    }
+    .github-url > img {
+        display: inline-block;
+        width: 150px;
+        border-radius: 5px;
     }
 </style>
