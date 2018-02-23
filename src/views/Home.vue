@@ -73,6 +73,9 @@ export default {
         display: inline-block;
         margin: 0 10px;
     }
+    a {
+        color: #212121;
+    }
 
     .github-url {
         text-align: center;
