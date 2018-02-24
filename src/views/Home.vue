@@ -3,7 +3,7 @@
         <img class="logo" src="@/assets/logo-orange.png">
         <div class="home-menu">
             <h1>Frontend Love Amsterdam 2018</h1>
-            <h3>Topics</h3>
+            <h2>Topics</h2>
             <ul>
                 <li>
                     <router-link to="/vue-cli">vue-cli 3.0.0-beta.1</router-link>
@@ -54,18 +54,18 @@ export default {
         padding: 60px;
     }
 
-    h3 {
-        font-size: 1.5em;
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
         font-weight: 900;
         margin: 40px 0;
     }
 
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
     li {
+        font-size: 1.5em;
         display: inline-block;
         margin: 0 10px;
     }

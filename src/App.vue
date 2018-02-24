@@ -33,15 +33,26 @@
         min-height:100vh;
         overflow-y: auto;
     }
-    body{
-        min-height:100vh;
-    }
+    body{ min-height:100vh; }
+
     h1 {
       color: #ca5b10;
+      font-size: 6em;
+      margin-bottom: 40px;
     }
-    h2, h3, p, a {
-      color: #212121;
+    h2, p, span, a { color: #212121; }
+    h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
     }
+    p, span { font-size: 2em; }
+    span { display: inline-block; }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li { display: block; }
 
     #app {
         font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -64,5 +75,25 @@
         position: fixed;
         right: 0;
         z-index: -9999;
+    }
+
+    .blackbox {
+        text-align: left;
+        background: black;
+        margin: 60px 120px;
+        padding: 60px 120px 40px;
+    }
+
+    .terminal {
+        font-size: 2em;
+        color: #3b7c15;
+        margin-bottom: 20px;;
+    }
+    .terminal-cmd {
+        color: #d3dce4;
+    }
+    .terminal > span {
+        font-size: 1em;
+        color: #ba3327;
     }
 </style>

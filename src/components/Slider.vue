@@ -1,8 +1,8 @@
 <template>
-    <div id="slider">
+    <div id="slider" @keyup.left="previous" @keyup.right="next">
         <i class="navigation left" :class="{ visible: leftIsVisible }" @click="previous"></i>
         <slot/>
-        <i class="navigation right" :class="{ visible: rightIsVisible }" @click="next"></i>
+        <i class="navigation right" :class="{ visible: rightIsVisible }" @click="next" @keyup.right="next"></i>
     </div>
 </template>
 
@@ -12,7 +12,8 @@
         data() {
             return {
                 slides: [],
-                currentSlide: 0
+                currentSlide: 0,
+                step: 0
             }
         },
         computed: {
@@ -25,6 +26,10 @@
         },
         methods: {
             previous () {
+                if (this.currentSlide === 0) {
+                    return;
+                }
+
                 this.currentSlide--;
 
                 if (this.currentSlide < 0) {
@@ -35,6 +40,10 @@
             },
 
             next () {
+                if (this.currentSlide === this.slides.length - 1) {
+                    return;
+                }
+
                 this.currentSlide++;
 
                 if (this.currentSlide > this.slides.length - 1) {
@@ -44,18 +53,56 @@
                 this.moveSlides();
             },
             moveSlides () {
+                this.step = 0;
+
                 this.slides.forEach((slide) => {
                     slide.style.setProperty(
                         'transform',
                         'translate3d(0, ' + (this.currentSlide * -100) + 'vh, 0)'
                     );
                 });
+            },
+
+            nextStep () {
+                this.step++;
+            },
+
+            previousStep () {
+                if (this.step > 0) {
+                    this.step--;
+                }
+            },
+
+            showStep (current) {
+                return this.step >= current;
             }
         },
         mounted () {
             this.$slots.default.forEach(vnode => {
                 if (vnode.tag !== undefined) {
                     this.slides.push(vnode.elm);
+                }
+            });
+
+            window.addEventListener('keyup', (event) => {
+                if (event.keyCode === 37) {
+                    this.previous();
+                }
+
+                if (event.keyCode === 39) {
+                    this.next();
+                }
+
+                if (event.keyCode === 40 || event.keyCode === 32) {
+                    this.nextStep();
+                }
+
+                if (event.keyCode === 38) {
+                    this.previousStep();
+                }
+
+                if (event.keyCode === 46) {
+                    this.step = 0;
                 }
             });
         }
@@ -81,10 +128,11 @@
         border-radius: 3px;
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
         padding: 60px;
-        -webkit-transition: all 300ms cubic-bezier(.25,.75,.5,1.25);
-        -moz-transition: all 300ms cubic-bezier(.25,.75,.5,1.25);
-        -o-transition: all 300ms cubic-bezier(.25,.75,.5,1.25);
-        transition: all 300ms cubic-bezier(.25,.75,.5,1.25);
+        overflow: hidden;
+        -webkit-transition: all 600ms cubic-bezier(.25,.75,.5,1.25);
+        -moz-transition: all 600ms cubic-bezier(.25,.75,.5,1.25);
+        -o-transition: all 600ms cubic-bezier(.25,.75,.5,1.25);
+        transition: all 600ms cubic-bezier(.25,.75,.5,1.25);
     }
     .navigation {
         display: none;
@@ -92,6 +140,7 @@
         position: absolute;
         top: 50%;
         bottom: 0;
+        z-index: 1;
         margin: 0;
         width: 0;
         height: 0;
@@ -112,7 +161,7 @@
         border-right:30px solid #ccc;
     }
     .navigation.left:hover, .navigation.left:active {
-        border-right-color: #444;
+        border-right-color: #ca5b10;
     }
     .navigation.right {
         right: 5%;
