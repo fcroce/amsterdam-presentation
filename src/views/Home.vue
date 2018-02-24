@@ -54,10 +54,6 @@ export default {
         padding: 60px;
     }
 
-    h1 {
-        color: #ca5b10;
-    }
-
     h3 {
         font-size: 1.5em;
         font-weight: 900;

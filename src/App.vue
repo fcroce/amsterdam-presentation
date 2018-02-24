@@ -36,7 +36,10 @@
     body{
         min-height:100vh;
     }
-    h1, h2, h3, p, a {
+    h1 {
+      color: #ca5b10;
+    }
+    h2, h3, p, a {
       color: #212121;
     }
 

@@ -1,8 +1,8 @@
 <template>
     <div id="slider">
-        <i class="navigation left" :class="{ visible: leftIsVisible }"></i>
+        <i class="navigation left" :class="{ visible: leftIsVisible }" @click="previous"></i>
         <slot/>
-        <i class="navigation right" :class="{ visible: rightIsVisible }"></i>
+        <i class="navigation right" :class="{ visible: rightIsVisible }" @click="next"></i>
     </div>
 </template>
 
@@ -12,9 +12,44 @@
         data() {
             return {
                 slides: [],
-                currentSlide: 0,
-                leftIsVisible: false,
-                rightIsVisible: false,
+                currentSlide: 0
+            }
+        },
+        computed: {
+            leftIsVisible () {
+                return this.currentSlide > 0;
+            },
+            rightIsVisible () {
+                return this.currentSlide < this.slides.length - 1;
+            }
+        },
+        methods: {
+            previous () {
+                this.currentSlide--;
+
+                if (this.currentSlide < 0) {
+                    this.currentSlide = this.slides.length - 1;
+                }
+
+                this.moveSlides();
+            },
+
+            next () {
+                this.currentSlide++;
+
+                if (this.currentSlide > this.slides.length - 1) {
+                    this.currentSlide = 0;
+                }
+
+                this.moveSlides();
+            },
+            moveSlides () {
+                this.slides.forEach((slide) => {
+                    slide.style.setProperty(
+                        'transform',
+                        'translate3d(0, ' + (this.currentSlide * -100) + 'vh, 0)'
+                    );
+                });
             }
         },
         mounted () {
@@ -23,13 +58,6 @@
                     this.slides.push(vnode.elm);
                 }
             });
-
-            if (this.slides.length) {
-                this.rightIsVisible = true;
-            }
-
-            // TODO
-            console.log(this.slides);
         }
     }
 </script>
@@ -53,20 +81,22 @@
         border-radius: 3px;
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
         padding: 60px;
-        -webkit-transition: all 250ms ease;
-        -moz-transition: all 250ms ease;
-        -o-transition: all 250ms ease;
-        transition: all 250ms ease;
+        -webkit-transition: all 300ms cubic-bezier(.25,.75,.5,1.25);
+        -moz-transition: all 300ms cubic-bezier(.25,.75,.5,1.25);
+        -o-transition: all 300ms cubic-bezier(.25,.75,.5,1.25);
+        transition: all 300ms cubic-bezier(.25,.75,.5,1.25);
     }
     .navigation {
-        opacity: 0;
+        display: none;
         cursor: pointer;
         position: absolute;
         top: 50%;
         bottom: 0;
         margin: 0;
-        width: 5%;
-        display: flex;
+        width: 0;
+        height: 0;
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
         justify-content: center;
         align-content: center;
         flex-direction: column;
@@ -76,12 +106,6 @@
         -moz-transition: all 250ms ease;
         -o-transition: all 250ms ease;
         transition: all 250ms ease;
-    }
-    .navigation.left, .navigation.right {
-        width: 0;
-        height: 0;
-        border-top: 30px solid transparent;
-        border-bottom: 30px solid transparent;
     }
     .navigation.left {
         left: 5%;
@@ -95,9 +119,9 @@
         border-left: 30px solid #ccc;
     }
     .navigation.right:hover, .navigation.right:active {
-        border-left-color: #444;
+        border-left-color: #ca5b10;
     }
     .navigation.left.visible, .navigation.right.visible {
-        opacity: 1;
+        display: flex;
     }
 </style>
