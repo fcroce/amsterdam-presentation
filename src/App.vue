@@ -37,15 +37,15 @@
 
     h1 {
       color: #ca5b10;
-      font-size: 6em;
+      font-size: 4em;
       margin-bottom: 40px;
     }
     h2, p, span, a { color: #212121; }
     h2 {
-      font-size: 3em;
+      font-size: 2em;
       margin-bottom: 20px;
     }
-    p, span { font-size: 2em; }
+    p, span { font-size: 1.5em; }
     span { display: inline-block; }
 
     ul {
@@ -63,7 +63,7 @@
     }
 
     #background {
-        background-image: url(assets/background-amsterdam.jpg);
+        background-image: url('assets/background-amsterdam.jpg');
         background-size: cover;
         display: block;
         filter: blur(5px);
@@ -77,15 +77,55 @@
         z-index: -9999;
     }
 
+    #home {
+      display: block;
+      position: fixed;
+      bottom: 6%;
+      left: 4%;
+      width: 50px;
+      height: 50px;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.10) url('assets/home.png') no-repeat center center;
+      background-size: 60% 60%;
+      -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-transition: background-color 250ms ease;
+      -moz-transition: background-color 250ms ease;
+      -o-transition: background-color 250ms ease;
+      transition: background-color 250ms ease;
+    }
+    #home:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    .quote {
+        font-size: 1.3em;
+        font-style: italic;
+        margin-bottom: 40px;
+    }
+    .quote > p:nth-child(1):before { content: '“'; }
+    .quote> p:nth-child(1):after { content: '”'; }
+    .quote > p:nth-child(2):before { content: '~ '; }
+    .quote> p:nth-child(2):after { content: ' ~'; }
+
     .blackbox {
         text-align: left;
-        background: black;
+        background: rgba(0,0,0,0.85);
         margin: 60px 120px;
-        padding: 60px 120px 40px;
+        padding: 40px 120px 40px;
     }
 
     .terminal {
-        font-size: 2em;
+        font-size: 1.3em;
         color: #3b7c15;
         margin-bottom: 20px;;
     }
@@ -95,5 +135,13 @@
     .terminal > span {
         font-size: 1em;
         color: #ba3327;
+    }
+
+    .code span {
+        display: inline-block;
+        color: #d3dce4;
+    }
+    .code i.tab {
+        padding-left: 20px;
     }
 </style>

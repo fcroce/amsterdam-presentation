@@ -9,19 +9,16 @@
                     <router-link to="/vue-cli">vue-cli 3.0.0-beta.1</router-link>
                 </li>
                 <li>
-                    <router-link to="/transitions">CSS Transitions</router-link>
+                    <router-link to="/transitions">Transitions</router-link>
                 </li>
                 <li>
-                    <router-link to="/state-transitions">Vue Transitions</router-link>
+                    <router-link to="/vuex">Vuex</router-link>
                 </li>
                 <li>
-                    <router-link to="/tweezing">Nuxt</router-link>
+                    <router-link to="/nuxt">Nuxt</router-link>
                 </li>
                 <li>
-                    <router-link to="/vue-cli">Vuex</router-link>
-                </li>
-                <li>
-                    <router-link to="/panel">Vuetify Panel</router-link>
+                    <router-link to="/vuetify-panel">Vuetify Panel</router-link>
                 </li>
             </ul>
 
@@ -44,8 +41,8 @@ export default {
 <style scoped>
     img.logo {
         display: inline-block;
-        height: 300px;
-        margin: 40px 0 60px;
+        height: 250px;
+        margin: 40px 0;
     }
     .home-menu {
         background: rgba(255, 255, 255, 0.35);
@@ -75,11 +72,15 @@ export default {
 
     .github-url {
         text-align: center;
-        padding: 100px 0 0;
+        padding: 80px 0 0;
     }
     .github-url > img {
         display: inline-block;
-        width: 150px;
+        width: 100px;
         border-radius: 5px;
+    }
+    .github-url > p {
+        font-size: 1em;
+        margin-top: 10px;
     }
 </style>

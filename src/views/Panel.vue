@@ -84,5 +84,7 @@
 </script>
 
 <style scoped>
-
+    span {
+        color: #d3dce4;
+    }
 </style>

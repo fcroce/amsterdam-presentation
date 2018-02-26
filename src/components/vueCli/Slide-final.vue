@@ -9,6 +9,7 @@
 <style scoped>
     img {
         margin: 120px auto;
-        width: 50%;
+        width: 40%;
+        border-radius: 3px;
     }
 </style>

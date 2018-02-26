@@ -109,6 +109,15 @@
     }
 </script>
 
+<style>
+    #slider > div * {
+        -webkit-transition: opacity 200ms ease-in;
+        -moz-transition: opacity 200ms ease-in;
+        -o-transition: opacity 200ms ease-in;
+        transition: opacity 200ms ease-in;
+    }
+</style>
+
 <style scoped>
     #slider {
         display: block;

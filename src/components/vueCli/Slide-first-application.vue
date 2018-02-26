@@ -16,6 +16,6 @@
     img {
         display: block;
         margin: 60px auto;
-        width: 65%;
+        width: 55%;
     }
 </style>

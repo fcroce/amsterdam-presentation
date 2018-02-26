@@ -1,8 +1,8 @@
 <template>
     <div class="vue-cli">
-        <div id="home">
-            <router-link to="/">Home</router-link>
-        </div>
+        <router-link to="/">
+            <div id="home"></div>
+        </router-link>
         <slider>
             <slide-introduction/>
             <slide-installation/>
@@ -32,13 +32,6 @@
 </script>
 
 <style scoped>
-    #home {
-        display: block;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1;
-    }
     a {
         color: #212121;
     }
