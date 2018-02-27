@@ -2,7 +2,7 @@
     <div id="slide-first-application">
         <h1>First Application</h1>
 
-        <h2># vue create MyFirstApplication</h2>
+        <h2><b>#</b> vue create MyFirstApplication</h2>
 
         <img src="@/assets/vueCli/vue-cli-first-app-1.png" :style="[$parent.showStep(1) ? { opacity: 1 } : { opacity: 0 }]" />
 
@@ -13,6 +13,10 @@
 </template>
 
 <style scoped>
+    b {
+        color: #8c3800;
+    }
+
     img {
         display: block;
         margin: 60px auto;
