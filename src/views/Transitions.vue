@@ -8,7 +8,9 @@
             <slide-vue-transition/>
             <slide-vue-transition-enter-leave/>
             <slide-vue-transition-flow/>
+            <slide-vue-transition-hooks-mario/>
             <slide-vue-transition-hooks/>
+            <slide-vue-transition-hooks-all/>
         </slider>
     </div>
 </template>
@@ -19,7 +21,9 @@
     import SlideVueTransition from '@/components/transitions/Slide-vue-transition.vue';
     import SlideVueTransitionEnterLeave from '@/components/transitions/Slide-vue-transition-enter-leave.vue';
     import SlideVueTransitionFlow from '@/components/transitions/Slide-vue-transition-flow.vue';
+    import SlideVueTransitionHooksMario from '@/components/transitions/Slide-vue-transition-hooks-mario.vue';
     import SlideVueTransitionHooks from '@/components/transitions/Slide-vue-transition-hooks.vue';
+    import SlideVueTransitionHooksAll from '@/components/transitions/Slide-vue-transition-hooks-all.vue';
 
     export default {
         name: "vue-cli",
@@ -29,7 +33,9 @@
             SlideVueTransition,
             SlideVueTransitionEnterLeave,
             SlideVueTransitionFlow,
-            SlideVueTransitionHooks
+            SlideVueTransitionHooksMario,
+            SlideVueTransitionHooks,
+            SlideVueTransitionHooksAll
         }
     };
 </script>

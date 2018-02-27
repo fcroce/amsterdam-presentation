@@ -122,6 +122,9 @@
         background: rgba(0,0,0,0.85);
         margin: 60px 120px;
         padding: 40px 120px 40px;
+        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 3px;
     }
 
     .terminal {
