@@ -11,6 +11,7 @@
             <slide-vue-transition-hooks-mario/>
             <slide-vue-transition-hooks/>
             <slide-vue-transition-hooks-all/>
+            <slide-vue-state-transition/>
         </slider>
     </div>
 </template>
@@ -24,6 +25,7 @@
     import SlideVueTransitionHooksMario from '@/components/transitions/Slide-vue-transition-hooks-mario.vue';
     import SlideVueTransitionHooks from '@/components/transitions/Slide-vue-transition-hooks.vue';
     import SlideVueTransitionHooksAll from '@/components/transitions/Slide-vue-transition-hooks-all.vue';
+    import SlideVueStateTransition from '@/components/transitions/Slide-vue-state-transition.vue';
 
     export default {
         name: "vue-cli",
@@ -35,7 +37,8 @@
             SlideVueTransitionFlow,
             SlideVueTransitionHooksMario,
             SlideVueTransitionHooks,
-            SlideVueTransitionHooksAll
+            SlideVueTransitionHooksAll,
+            SlideVueStateTransition
         }
     };
 </script>
