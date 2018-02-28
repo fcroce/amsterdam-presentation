@@ -8,7 +8,7 @@
                     app
             >
                 <v-list dense>
-                    <v-list-tile v-for="item in items" :key="item.title" @click="" :to="item.path">
+                    <v-list-tile v-for="item in items" :key="item.title" :to="item.path">
                         <v-list-tile-action>
                             <v-icon>{{ item.icon }}</v-icon>
                         </v-list-tile-action>
@@ -61,30 +61,30 @@
 </template>
 
 <script>
-    export default {
-        name: "panel",
-        data: () => ({
-            drawer: true,
-            items: [
-                { title: 'Home', icon: 'home', path: '/' },
-                { title: 'Dashboard', icon: 'dashboard' },
-                { title: 'Settings', icon: 'settings' }
-            ],
-            snackbar: false,
-            y: 'top',
-            x: null,
-            mode: '',
-            timeout: 6000,
-            text: 'Please refactor HBO Client'
-        }),
-        props: {
-            source: String
-        }
-    };
+export default {
+  name: "panel",
+  data: () => ({
+    drawer: true,
+    items: [
+      { title: "Home", icon: "home", path: "/" },
+      { title: "Dashboard", icon: "dashboard" },
+      { title: "Settings", icon: "settings" }
+    ],
+    snackbar: false,
+    y: "top",
+    x: null,
+    mode: "",
+    timeout: 6000,
+    text: "Please refactor HBO Client"
+  }),
+  props: {
+    source: String
+  }
+};
 </script>
 
 <style scoped>
-    span {
-        color: #d3dce4;
-    }
+span {
+  color: #d3dce4;
+}
 </style>

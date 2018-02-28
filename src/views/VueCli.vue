@@ -13,26 +13,26 @@
 </template>
 
 <script>
-    import Slider from '@/components/Slider.vue';
-    import SlideIntroduction from '@/components/vueCli/Slide-introduction.vue';
-    import SlideInstallation from '@/components/vueCli/Slide-installation.vue';
-    import SlideFirstApplication from '@/components/vueCli/Slide-first-application.vue';
-    import SlideFinal from '@/components/vueCli/Slide-final.vue';
+import Slider from "@/components/Slider.vue";
+import SlideIntroduction from "@/components/vueCli/Slide-introduction.vue";
+import SlideInstallation from "@/components/vueCli/Slide-installation.vue";
+import SlideFirstApplication from "@/components/vueCli/Slide-first-application.vue";
+import SlideFinal from "@/components/vueCli/Slide-final.vue";
 
-    export default {
-        name: "vue-cli",
-        components: {
-            Slider,
-            SlideIntroduction,
-            SlideInstallation,
-            SlideFirstApplication,
-            SlideFinal
-        }
-    };
+export default {
+  name: "vue-cli",
+  components: {
+    Slider,
+    SlideIntroduction,
+    SlideInstallation,
+    SlideFirstApplication,
+    SlideFinal
+  }
+};
 </script>
 
 <style scoped>
-    a {
-        color: #212121;
-    }
+a {
+  color: #212121;
+}
 </style>

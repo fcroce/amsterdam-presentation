@@ -46,35 +46,35 @@
 </template>
 
 <style scoped>
-    b {
-        color: #8c3800;
-    }
+b {
+  color: #8c3800;
+}
 
-    #transition-states {
-        float: left;
-        text-align: left;
-        width: 15%;
-        margin: 60px 0 0 20%;
-    }
-    #transition-states p {
-        font-size: 1.8em;
-    }
-    #transition-right-notes {
-        float: left;
-        width: 55%;
-        margin: 60px 0 0 100px;
-    }
-    #transition-states p > span {
-        display: inline-block;
-        background-color: #ca5b10;
-        width: 30px;
-        height: 30px;
-        margin-right: 20px;
-        float: left;
-    }
+#transition-states {
+  float: left;
+  text-align: left;
+  width: 15%;
+  margin: 60px 0 0 20%;
+}
+#transition-states p {
+  font-size: 1.8em;
+}
+#transition-right-notes {
+  float: left;
+  width: 55%;
+  margin: 60px 0 0 100px;
+}
+#transition-states p > span {
+  display: inline-block;
+  background-color: #ca5b10;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  float: left;
+}
 
-    #transition-example {
-        width: 65%;
-        margin: 60px auto;
-    }
+#transition-example {
+  width: 65%;
+  margin: 60px auto;
+}
 </style>

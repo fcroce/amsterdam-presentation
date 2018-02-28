@@ -7,9 +7,9 @@
 </template>
 
 <style scoped>
-    img {
-        margin: 120px auto;
-        width: 40%;
-        border-radius: 3px;
-    }
+img {
+  margin: 120px auto;
+  width: 40%;
+  border-radius: 3px;
+}
 </style>

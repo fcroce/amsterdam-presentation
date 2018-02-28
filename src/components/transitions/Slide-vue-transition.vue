@@ -32,25 +32,25 @@
 </template>
 
 <style scoped>
-    #transition-context {
-        text-align: left;
-        width: 32%;
-        margin: 60px auto;
-    }
-    #transition-context p {
-        font-size: 1.8em;
-    }
-    #transition-context p > span {
-        display: inline-block;
-        background-color: #ca5b10;
-        width: 30px;
-        height: 30px;
-        margin-right: 20px;
-        float: left;
-    }
+#transition-context {
+  text-align: left;
+  width: 32%;
+  margin: 60px auto;
+}
+#transition-context p {
+  font-size: 1.8em;
+}
+#transition-context p > span {
+  display: inline-block;
+  background-color: #ca5b10;
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+  float: left;
+}
 
-    #transition-example {
-        width: 28%;
-        margin: 60px auto;
-    }
+#transition-example {
+  width: 28%;
+  margin: 60px auto;
+}
 </style>

@@ -13,13 +13,13 @@
 </template>
 
 <style scoped>
-    b {
-        color: #8c3800;
-    }
+b {
+  color: #8c3800;
+}
 
-    img {
-        display: block;
-        margin: 60px auto;
-        width: 55%;
-    }
+img {
+  display: block;
+  margin: 60px auto;
+  width: 55%;
+}
 </style>

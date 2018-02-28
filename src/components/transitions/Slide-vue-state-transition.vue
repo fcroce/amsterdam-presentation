@@ -32,10 +32,10 @@
                         <span><i class="tab"></i><i class="tab"></i> .easing(TWEEN.Easing.Quadratic.Out)</span><br />
                         <span><i class="tab"></i><i class="tab"></i> .to({ tweeningNumber: newValue }, 500)</span><br />
                         <span><i class="tab"></i><i class="tab"></i> .onUpdate(function () {</span><br />
-                        <span><i class="tab"></i><i class="tab"></i> vm.animatedNumber = tweenObj.tweeningNumber.toFixed(0);</span><br />
+                        <span><i class="tab"></i><i class="tab"></i><i class="tab"></i> vm.animatedNumber = tweenObj.tweeningNumber.toFixed(0);</span><br />
                         <span><i class="tab"></i><i class="tab"></i> })</span><br />
                         <span><i class="tab"></i><i class="tab"></i> .onComplete(function () {</span><br />
-                        <span><i class="tab"></i><i class="tab"></i> cancelAnimationFrame(animationFrame);</span><br />
+                        <span><i class="tab"></i><i class="tab"></i><i class="tab"></i> cancelAnimationFrame(animationFrame);</span><br />
                         <span><i class="tab"></i><i class="tab"></i> })</span><br />
                         <span><i class="tab"></i><i class="tab"></i> .start();</span><br />
                     <span><i class="tab"></i> animationFrame = requestAnimationFrame(animate);</span><br />
@@ -46,66 +46,66 @@
 </template>
 
 <script>
-    import TWEEN from "@tweenjs/tween.js";
+import TWEEN from "@tweenjs/tween.js";
 
-    export default {
-        data() {
-            return {
-                number: 0,
-                animatedNumber: 0
-            }
-        },
-        watch: {
-            number (newValue, oldValue) {
-                const vm = this;
-                let animationFrame;
-                let animate = (time) => {
-                    TWEEN.update(time);
-                    animationFrame = requestAnimationFrame(animate);
-                };
+export default {
+  data() {
+    return {
+      number: 0,
+      animatedNumber: 0
+    };
+  },
+  watch: {
+    number(newValue, oldValue) {
+      const vm = this;
+      let animationFrame;
+      let animate = time => {
+        TWEEN.update(time);
+        animationFrame = requestAnimationFrame(animate);
+      };
 
-                let tweenObj = { tweeningNumber: oldValue };
-                new TWEEN.Tween(tweenObj)
-                    .easing(TWEEN.Easing.Quadratic.Out)
-                    .to({ tweeningNumber: newValue }, 500)
-                    .onUpdate(function () {
-                        vm.animatedNumber = tweenObj.tweeningNumber.toFixed(0);
-                    })
-                    .onComplete(function () {
-                        cancelAnimationFrame(animationFrame);
-                    })
-                    .start();
-                animationFrame = requestAnimationFrame(animate);
-            }
-        }
+      let tweenObj = { tweeningNumber: oldValue };
+      new TWEEN.Tween(tweenObj)
+        .easing(TWEEN.Easing.Quadratic.Out)
+        .to({ tweeningNumber: newValue }, 500)
+        .onUpdate(function() {
+          vm.animatedNumber = tweenObj.tweeningNumber.toFixed(0);
+        })
+        .onComplete(function() {
+          cancelAnimationFrame(animationFrame);
+        })
+        .start();
+      animationFrame = requestAnimationFrame(animate);
     }
+  }
+};
 </script>
 
 <style scoped>
-    #tween-logo {
-        display: block;
-        width: 140px;
-        background-color: #cdcfcf;
-        padding: 30px;
-        margin: 60px auto;
-        border-radius: 3px;
-        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    }
+#tween-logo {
+  display: block;
+  width: 140px;
+  background-color: #cdcfcf;
+  padding: 30px;
+  margin: 60px auto;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
 
-    input {
-        color: #d3dce4;
-        background: rgba(0,0,0,0.85);
-        padding: 6px 10px;
-        border-radius: 3px;
-        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    }
+input {
+  color: #d3dce4;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 6px 10px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
 
-    .blackbox {
-        margin: 20px 120px;
-    }
-    .blackbox span {
-        font-size: 1em;
-    }
+.blackbox {
+  margin: 20px 120px;
+}
+.blackbox span {
+  font-size: 1em;
+}
 </style>

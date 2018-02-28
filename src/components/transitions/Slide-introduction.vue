@@ -40,30 +40,30 @@
 </template>
 
 <style scoped>
-    #css-transition {
-        float: left;
-        width: 50%;
-        margin-right: 5%;
-    }
-    #css-transition-example {
-        float: left;
-        width: 200px;
-        height: 200px;
-        background: #ca5b10;
-        margin: 110px 0 0 150px;
-        border-radius: 50%;
-        opacity: 1;
-        cursor: cell;
-        -webkit-transition: opacity 300ms ease-in;
-        -moz-transition: opacity 300ms ease-in;
-        -o-transition: opacity 300ms ease-in;
-        transition: opacity 300ms ease-in;
-    }
-    #css-transition-example:hover {
-        opacity: 0.5;
-    }
+#css-transition {
+  float: left;
+  width: 50%;
+  margin-right: 5%;
+}
+#css-transition-example {
+  float: left;
+  width: 200px;
+  height: 200px;
+  background: #ca5b10;
+  margin: 110px 0 0 150px;
+  border-radius: 50%;
+  opacity: 1;
+  cursor: cell;
+  -webkit-transition: opacity 300ms ease-in;
+  -moz-transition: opacity 300ms ease-in;
+  -o-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
+}
+#css-transition-example:hover {
+  opacity: 0.5;
+}
 
-    #mixin-example {
-        text-align: center;
-    }
+#mixin-example {
+  text-align: center;
+}
 </style>
