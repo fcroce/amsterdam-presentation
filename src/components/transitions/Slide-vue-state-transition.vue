@@ -84,10 +84,10 @@ export default {
 <style scoped>
 #tween-logo {
   display: block;
-  width: 140px;
+  width: 110px;
   background-color: #cdcfcf;
   padding: 30px;
-  margin: 60px auto;
+  margin: 30px auto;
   border-radius: 3px;
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
