@@ -2,9 +2,9 @@
     <div id="slide-evolution">
         <h1>Evolution</h1>
 
-        <h2 :style="[$parent.showStep(1) ? { opacity: 1 } : { opacity: 0 }]">Lets see how Vue.js can improve transitions</h2>
+        <h2>Lets see how Vue.js can improve transitions</h2>
 
-        <img src="@/assets/transitions/evolution.gif" :style="[$parent.showStep(1) ? { opacity: 1 } : { opacity: 0 }]">
+        <img src="@/assets/transitions/evolution.gif">
     </div>
 </template>
 

@@ -44,7 +44,7 @@
   margin-bottom: 60px;
 }
 #deployment-options p:first-child {
-  font-size: 3em;
+  font-size: 2.8em;
 }
 #deployment-options p:first-child > span {
   display: inline-block;

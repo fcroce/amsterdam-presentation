@@ -4,7 +4,7 @@
 
         <h2>Now Imagine if we could hook the action to a <b>JavaScript</b> method</h2>
 
-        <img src="@/assets/transitions/hook.png" :style="[$parent.showStep(1) ? { opacity: 1 } : { opacity: 0 }]">
+        <img src="@/assets/transitions/hook.png">
     </div>
 </template>
 
@@ -14,6 +14,7 @@ b {
 }
 
 img {
+  height: 65%;
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
   border-radius: 3px;

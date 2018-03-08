@@ -2,9 +2,9 @@
     <div id="slide-make-cool-animations">
         <h1>Enjoy</h1>
 
-        <h2 :style="[$parent.showStep(1) ? { opacity: 1 } : { opacity: 0 }]">Now we have all the tools to create cool animations!</h2>
+        <h2>Now we have all the tools to create cool animations!</h2>
 
-        <img src="@/assets/transitions/cool-animations.gif" :style="[$parent.showStep(1) ? { opacity: 1 } : { opacity: 0 }]">
+        <img src="@/assets/transitions/cool-animations.gif">
     </div>
 </template>
 

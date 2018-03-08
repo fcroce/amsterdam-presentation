@@ -5,7 +5,9 @@
         </router-link>
         <slider>
             <slide-introduction/>
+            <slide-transition-explained/>
             <slide-easing/>
+            <slide-transition-vs-animation/>
             <slide-evolution/>
             <slide-vue-transition/>
             <slide-vue-transition-enter-leave/>
@@ -24,7 +26,9 @@
 <script>
 import Slider from "@/components/Slider.vue";
 import SlideIntroduction from "@/components/transitions/Slide-introduction.vue";
+import SlideTransitionExplained from "@/components/transitions/Slide-transition-explained.vue";
 import SlideEasing from "@/components/transitions/Slide-easing.vue";
+import SlideTransitionVsAnimation from "@/components/transitions/Slide-transition-vs-animation.vue";
 import SlideEvolution from "@/components/transitions/Slide-evolution.vue";
 import SlideVueTransition from "@/components/transitions/Slide-vue-transition.vue";
 import SlideVueTransitionEnterLeave from "@/components/transitions/Slide-vue-transition-enter-leave.vue";
@@ -42,7 +46,9 @@ export default {
   components: {
     Slider,
     SlideIntroduction,
+    SlideTransitionExplained,
     SlideEasing,
+    SlideTransitionVsAnimation,
     SlideEvolution,
     SlideVueTransition,
     SlideVueTransitionEnterLeave,
