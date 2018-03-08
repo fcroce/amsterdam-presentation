@@ -37,9 +37,9 @@ export default new Router({
       component: Panel
     },
     {
-        path: "/questions",
-        name: "questions",
-        component: Questions
+      path: "/questions",
+      name: "questions",
+      component: Questions
     }
   ]
 });

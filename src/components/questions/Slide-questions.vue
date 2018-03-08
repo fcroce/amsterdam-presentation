@@ -9,8 +9,8 @@
 </template>
 
 <style scoped>
-    img {
-        margin: 120px auto;
-        width: 60%;
-    }
+img {
+  margin: 120px auto;
+  width: 60%;
+}
 </style>

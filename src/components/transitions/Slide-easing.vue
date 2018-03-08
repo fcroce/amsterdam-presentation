@@ -13,10 +13,10 @@
 </template>
 
 <style scoped>
-    img {
-        margin: 60px 0;
-        border-radius: 3px;
-        -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
-    }
+img {
+  margin: 60px 0;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
 </style>

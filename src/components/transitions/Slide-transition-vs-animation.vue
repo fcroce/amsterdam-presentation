@@ -34,16 +34,16 @@
 </template>
 
 <style scoped>
-    b {
-        color: #8c3800;
-    }
+b {
+  color: #8c3800;
+}
 
-    .section {
-        margin-top: 30px;
-    }
+.section {
+  margin-top: 30px;
+}
 
-    .blackbox {
-        width: 50%;
-        margin: 60px auto 0;
-    }
+.blackbox {
+  width: 50%;
+  margin: 60px auto 0;
+}
 </style>

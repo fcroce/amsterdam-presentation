@@ -17,20 +17,20 @@
 </template>
 
 <style scoped>
-    #transition-parts {
-        width: 36%;
-        margin: 100px auto 0;
-        text-align: left;
-    }
-    p {
-        font-size: 3em;
-        margin-top: 60px;
-    }
-    div p > span {
-        display: inline-block;
-        background-color: #ca5b10;
-        width: 30px;
-        height: 30px;
-        padding-right: 20px;
-    }
+#transition-parts {
+  width: 36%;
+  margin: 100px auto 0;
+  text-align: left;
+}
+p {
+  font-size: 3em;
+  margin-top: 60px;
+}
+div p > span {
+  display: inline-block;
+  background-color: #ca5b10;
+  width: 30px;
+  height: 30px;
+  padding-right: 20px;
+}
 </style>

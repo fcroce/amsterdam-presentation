@@ -52,7 +52,7 @@
 </template>
 
 <style scoped>
-    .code span {
-      font-size: 1em;
-    }
+.code span {
+  font-size: 1em;
+}
 </style>
