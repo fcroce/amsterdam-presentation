@@ -8,6 +8,7 @@ cache:
 
 before_deploy:
   - "npm run build"
+  - "ls -l dist"
 
 deploy:
   provider: pages
