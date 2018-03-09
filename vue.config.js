@@ -1,4 +1,4 @@
 module.exports = {
-  baseUrl: '/AmsterdamPresentation/',
+  baseUrl: '/amsterdam-presentation/',
   lintOnSave: false
 }
